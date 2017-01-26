@@ -3,12 +3,14 @@ import React from 'react';
 import { Text, View } from 'react-native';
 
 // Make a component
-const Header = () => {
+// when a header is rendered we take that props object - a bunch of data coming from the parent
+// and it will have a property called headerText and we will show that inside of our jsx)
+const Header = (props) => {
   const { textStyle, viewStyle } = styles;
 
   return (
     <View style={viewStyle}>
-      <Text style={textStyle}>Albums!</Text> 
+      <Text style={textStyle}>{props.headerText}</Text> 
     </View>  
   );
 }; 

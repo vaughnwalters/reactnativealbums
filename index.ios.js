@@ -5,8 +5,9 @@ import React from 'react';
 import { AppRegistry } from 'react-native';
 import Header from './src/components/header'
 
+// passing header component the text 'Albums' 
 const App = () => (
-  <Header />
+   <Header headerText={'Albums'} />
 );
 
 // Render it to to the device
