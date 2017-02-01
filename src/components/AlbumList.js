@@ -14,7 +14,9 @@ class AlbumList extends Component {
   }
 
   renderAlbums() {
-    return this.state.albums.map(album => <Text>{album.title}</Text>);
+    // best to use for unique key is ID, but in lieu of that we can use the album.title here
+    return this.state.albums.map(album =>
+      <Text key={album.title}>{album.title}</Text>);
   }
 
   render() {
